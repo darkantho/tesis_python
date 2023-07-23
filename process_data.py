@@ -1,16 +1,31 @@
 import os, glob
+import tensorflow as tf
+import cv2
 
-orange_train_directory = "Dataset1/dataset/train/*/*"
-orange_test_directory = "Dataset1/dataset/test/*/*"
-
-apple_train_directory = "Dataset2/apple_disease_classification/Train/*/*"
-apple_test_directory = "Dataset2/apple_disease_classification/Test/*/*"
-
-print(len(glob.glob(orange_train_directory)))
-print(len(glob.glob(orange_test_directory)))
+apple_train_directory = "apple/Train/*/*"
+apple_test_directory = "apple/Test/*/*"
 
 
-print(len(glob.glob(apple_train_directory)))
-print(len(glob.glob(apple_test_directory)))
+Train_list = glob.glob(apple_train_directory)
+Test_list = glob.glob(apple_test_directory)
 
+
+# for path in Train_list:
+
+#     newpath = 'apple_dataset/' + '/'.join(path.split('/')[1:])
+    
+#     image = cv2.imread(path)
+#     image = tf.image.resize(image,(800,800))
+#     image = image.numpy()
+#     cv2.imwrite(newpath,image)
+
+
+# for path in Test_list:
+
+#     newpath = 'apple_dataset/' + '/'.join(path.split('/')[1:])
+    
+#     image = cv2.imread(path)
+#     image = tf.image.resize(image,(800,800))
+#     image = image.numpy()
+#     cv2.imwrite(newpath,image)
 
